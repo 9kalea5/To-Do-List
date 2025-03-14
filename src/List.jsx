@@ -14,7 +14,11 @@ export default function List() {
       setTask(task.filter((_, i) => i !== index))
     }
     function up(){
-
+      if (index > 0) {
+        const updatedTasks = [...task];
+        [updatedTasks[index], updatedTasks[index - 1]] = [updatedTasks[index - 1], updatedTasks[index]];
+        setTask(updatedTasks);
+      }
     }
     function down(){
 
@@ -32,6 +36,8 @@ export default function List() {
           <div key={index} className="taskItem">
             <p className="paragraph">{task}</p>
             <button onClick={() => onDelete(index)} className="deleteButton">Delete</button>
+            <button onClick={() => up(index)} className='goingUp'>⬆️</button>
+            <button onClick={down} className='goingDown'>⬇️</button>
           </div>
         ))}
       </div>
