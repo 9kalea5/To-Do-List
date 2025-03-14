@@ -13,15 +13,19 @@ export default function List() {
     function onDelete(index){
       setTask(task.filter((_, i) => i !== index))
     }
-    function up(){
+    function up(index){
       if (index > 0) {
         const updatedTasks = [...task];
         [updatedTasks[index], updatedTasks[index - 1]] = [updatedTasks[index - 1], updatedTasks[index]];
         setTask(updatedTasks);
       }
     }
-    function down(){
-
+    function down(index){
+      if (index < task.length - 1) {
+        const updatedTasks = [...task];
+        [updatedTasks[index], updatedTasks[index + 1]] = [updatedTasks[index + 1], updatedTasks[index]];
+        setTask(updatedTasks);
+      }
     }
 
   return (
@@ -37,7 +41,7 @@ export default function List() {
             <p className="paragraph">{task}</p>
             <button onClick={() => onDelete(index)} className="deleteButton">Delete</button>
             <button onClick={() => up(index)} className='goingUp'>⬆️</button>
-            <button onClick={down} className='goingDown'>⬇️</button>
+            <button onClick={() => down(index)} className='goingDown'>⬇️</button>
           </div>
         ))}
       </div>
