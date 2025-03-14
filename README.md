@@ -1,12 +1,64 @@
-# React + Vite
+To-Do List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple To-Do List application built with React that allows users to add, delete, and manage tasks.
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ Add new tasks to the list
+✅ Delete specific tasks
+✅ Dynamic rendering of tasks
+✅ Simple and clean UI
 
-## Expanding the ESLint configuration
+Technologies Used
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+React.js - Frontend framework
+
+CSS - Styling
+
+Installation & Setup
+
+Clone the repository
+
+git clone https://github.com/your-username/To-Do-List.git
+cd To-Do-List
+
+Install dependencies
+
+npm install
+
+Start the development server
+
+npm start
+
+Project Structure
+
+To-Do-List/
+│── src/
+│   ├── components/
+│   │   ├── List.jsx  # Main To-Do List component
+│   ├── styles/
+│   │   ├── list.css  # Styling for the To-Do List
+│   ├── App.jsx       # Main application file
+│   ├── index.js      # Entry point
+│── public/
+│── package.json
+│── README.md
+
+Usage
+
+Enter a task in the input field.
+
+Click the Add button to add the task.
+
+Click the Delete button next to a task to remove it.
+
+Future Enhancements
+
+🚀 Add ability to edit tasks
+🚀 Implement task reordering (move up/down)
+🚀 Save tasks to local storage for persistence
+
+License
+
+This project is open-source and free to use.
+
